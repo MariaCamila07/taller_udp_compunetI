@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">8</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.016s</div>
+<div class="counter">0.007s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,159 +61,9 @@
 <div class="tab-container">
 <ul class="tabLinks">
 <li>
-<a href="#">Failed tests</a>
-</li>
-<li>
 <a href="#">Tests</a>
 </li>
 </ul>
-<div class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="testBatteryHandling()"></a>
-<h3 class="failures">CP-05: Registro y alertas de batería</h3>
-<span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;OK;BATTERY_OK;80.0&gt; but was: &lt;ERROR;NOT_IMPLEMENTED&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at app//service.TelemetryProcessorTest.testBatteryHandling(TelemetryProcessorTest.java:56)
-	at java.base@21.0.12.1/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testFreezingTemperatureAlert()"></a>
-<h3 class="failures">CP-03: Alerta de congelamiento / temperatura bajo cero (&lt; 0.0)</h3>
-<span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;ALERT;FREEZING_TEMPERATURE;-5.0&gt; but was: &lt;ERROR;NOT_IMPLEMENTED&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at app//service.TelemetryProcessorTest.testFreezingTemperatureAlert(TelemetryProcessorTest.java:36)
-	at java.base@21.0.12.1/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testHighTemperatureAlert()"></a>
-<h3 class="failures">CP-02: Alerta de temperatura alta (&gt; 40.0)</h3>
-<span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;ALERT;HIGH_TEMPERATURE;42.5&gt; but was: &lt;ERROR;NOT_IMPLEMENTED&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at app//service.TelemetryProcessorTest.testHighTemperatureAlert(TelemetryProcessorTest.java:29)
-	at java.base@21.0.12.1/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testHumidityHandling()"></a>
-<h3 class="failures">CP-04: Registro y alertas de humedad</h3>
-<span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;OK;HUMIDITY_RECORDED;60.0&gt; but was: &lt;ERROR;NOT_IMPLEMENTED&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at app//service.TelemetryProcessorTest.testHumidityHandling(TelemetryProcessorTest.java:43)
-	at java.base@21.0.12.1/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testInvalidFormats()"></a>
-<h3 class="failures">CP-06: Manejo de formatos inválidos y errores de parseo</h3>
-<span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;ERROR;INVALID_FORMAT&gt; but was: &lt;ERROR;NOT_IMPLEMENTED&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at app//service.TelemetryProcessorTest.testInvalidFormats(TelemetryProcessorTest.java:65)
-	at java.base@21.0.12.1/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testNormalTemperature()"></a>
-<h3 class="failures">CP-01: Registro de temperatura en rango normal</h3>
-<span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;OK;TEMP_RECORDED;25.0&gt; but was: &lt;ERROR;NOT_IMPLEMENTED&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at app//service.TelemetryProcessorTest.testNormalTemperature(TelemetryProcessorTest.java:22)
-	at java.base@21.0.12.1/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testStatusQuery()"></a>
-<h3 class="failures">CP-08: Consulta de estado con comando STATUS</h3>
-<span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;ERROR;DEVICE_NOT_FOUND&gt; but was: &lt;ERROR;NOT_IMPLEMENTED&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at app//service.TelemetryProcessorTest.testStatusQuery(TelemetryProcessorTest.java:85)
-	at java.base@21.0.12.1/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-</pre>
-</span>
-</div>
-<div class="test">
-<a name="testUnknownSensorType()"></a>
-<h3 class="failures">CP-07: Error por tipo de sensor no soportado</h3>
-<span class="code">
-<pre>org.opentest4j.AssertionFailedError: expected: &lt;ERROR;UNKNOWN_SENSOR_TYPE&gt; but was: &lt;ERROR;NOT_IMPLEMENTED&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at app//service.TelemetryProcessorTest.testUnknownSensorType(TelemetryProcessorTest.java:78)
-	at java.base@21.0.12.1/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-</pre>
-</span>
-</div>
-</div>
 <div class="tab">
 <h2>Tests</h2>
 <table>
@@ -226,52 +76,52 @@
 </tr>
 </thead>
 <tr>
-<td class="failures">CP-05: Registro y alertas de batería</td>
-<td class="failures">testBatteryHandling()</td>
-<td class="failures">0.002s</td>
-<td class="failures">failed</td>
+<td class="success">CP-05: Registro y alertas de batería</td>
+<td class="success">testBatteryHandling()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">CP-03: Alerta de congelamiento / temperatura bajo cero (&lt; 0.0)</td>
-<td class="failures">testFreezingTemperatureAlert()</td>
-<td class="failures">0.002s</td>
-<td class="failures">failed</td>
+<td class="success">CP-03: Alerta de congelamiento / temperatura bajo cero (&lt; 0.0)</td>
+<td class="success">testFreezingTemperatureAlert()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">CP-02: Alerta de temperatura alta (&gt; 40.0)</td>
-<td class="failures">testHighTemperatureAlert()</td>
-<td class="failures">0.004s</td>
-<td class="failures">failed</td>
+<td class="success">CP-02: Alerta de temperatura alta (&gt; 40.0)</td>
+<td class="success">testHighTemperatureAlert()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">CP-04: Registro y alertas de humedad</td>
-<td class="failures">testHumidityHandling()</td>
-<td class="failures">0.001s</td>
-<td class="failures">failed</td>
+<td class="success">CP-04: Registro y alertas de humedad</td>
+<td class="success">testHumidityHandling()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">CP-06: Manejo de formatos inválidos y errores de parseo</td>
-<td class="failures">testInvalidFormats()</td>
-<td class="failures">0.001s</td>
-<td class="failures">failed</td>
+<td class="success">CP-06: Manejo de formatos inválidos y errores de parseo</td>
+<td class="success">testInvalidFormats()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">CP-01: Registro de temperatura en rango normal</td>
-<td class="failures">testNormalTemperature()</td>
-<td class="failures">0.001s</td>
-<td class="failures">failed</td>
+<td class="success">CP-01: Registro de temperatura en rango normal</td>
+<td class="success">testNormalTemperature()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">CP-08: Consulta de estado con comando STATUS</td>
-<td class="failures">testStatusQuery()</td>
-<td class="failures">0.003s</td>
-<td class="failures">failed</td>
+<td class="success">CP-08: Consulta de estado con comando STATUS</td>
+<td class="success">testStatusQuery()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">CP-07: Error por tipo de sensor no soportado</td>
-<td class="failures">testUnknownSensorType()</td>
-<td class="failures">0.002s</td>
-<td class="failures">failed</td>
+<td class="success">CP-07: Error por tipo de sensor no soportado</td>
+<td class="success">testUnknownSensorType()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
@@ -283,7 +133,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 9.0.0</a> at Sep 30, 2026, 7:45:27 PM</p>
+<a href="https://www.gradle.org">Gradle 9.0.0</a> at 1/10/2026, 9:53:21 a. m.</p>
 </div>
 </div>
 </body>

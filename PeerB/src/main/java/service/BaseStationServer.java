@@ -78,6 +78,13 @@ public class BaseStationServer {
         // dirigido al remitente (packet.getAddress() y packet.getPort()).
 
         // TODO Paso 2.4: Enviar el paquete de respuesta a través del socket usando socket.send(...).
+
+        String message = new String(packet.getData(), packet.getOffset(), packet.getLength(), StandardCharsets.UTF_8);
+        String response = this.processor.process(message);
+        byte[] responseBytes = response.getBytes(StandardCharsets.UTF_8);
+        DatagramPacket responsePacket = new DatagramPacket(
+                responseBytes, responseBytes.length, packet.getAddress(), packet.getPort());
+        socket.send(responsePacket);
     }
 
     /**
